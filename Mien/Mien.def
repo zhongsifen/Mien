@@ -1,0 +1,4 @@
+LIBRARY	Mien
+
+EXPORTS
+	landmark_1
