@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MienLandmark.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Mien.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>

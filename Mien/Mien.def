@@ -1,4 +1,6 @@
 LIBRARY	Mien
 
 EXPORTS
-	landmark_1
+	landmark
+	show_face
+	show_landmark
