@@ -1,6 +1,0 @@
-LIBRARY	Mien
-
-EXPORTS
-	landmark
-	show_face
-	show_landmark

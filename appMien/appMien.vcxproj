@@ -84,9 +84,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Mien3rd.cpp" />
     <ClCompile Include="appMien.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MienDL\MienDL.vcxproj">
+      <Project>{6f9744b5-85f1-4440-82db-d26e7d801230}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Mien\Mien.vcxproj">
       <Project>{cdf44ec3-d88e-467d-a693-000a49496730}</Project>
     </ProjectReference>
