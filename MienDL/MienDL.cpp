@@ -15,20 +15,28 @@ MienDL::MienDL() {
 	dlib::deserialize(MienConst::_DAT_NET) >> _net;
 }
 
-bool MienDL::detect(cv::Mat& gray, cv::Rect& face, std::vector<cv::Point>& landmarklist) {
-	//std::vector<Landmark> landmarks;
+bool MienDL::detect(cv::Mat& gray, cv::Rect& face, std::vector<cv::Point>& landmark) {
 	dlib::cv_image<uint8_t> dlimg(gray);
 	std::vector<std::pair<double, dlib::rectangle>> dets;
 	_fd(dlimg, dets);
 
 	int n = (int)dets.size();	if (n < 1) return false;
 	int i = 0;
-	//dlib_cv::fdlib(dets[i].second, face);
+	double p = dets[i].first;
+	for (int k = 1; k < n; k++) {
+		double q = dets[k].first;
+		if (p < q) {
+			p = q;
+			i = k;
+		}
+	}
+
 	dlib::full_object_detection fo = _sp(dlimg, dets[i].second);
 	dlib_cv::fdlib(fo.get_rect(), face);
-	landmarklist.resize(_nfp);
-	for (int k = 0; k < _nfp; k++) {
-		dlib_cv::fdlib(fo.part(k), landmarklist[k]);
+	int nfp = fo.num_parts();
+	landmark.resize(nfp);
+	for (int k = 0; k < nfp; k++) {
+		dlib_cv::fdlib(fo.part(k), landmark[k]);
 	}
 
 	return true;
