@@ -11,8 +11,8 @@ public:
 	~Mien() {  }
 
 	bool virtual detect(cv::Mat& g, cv::Rect& face, std::vector<cv::Point>& landmark) = 0;
-	bool eyesmouth(std::vector<cv::Point>& landmark, std::vector<cv::Point2f>& lrm);
-	bool align(cv::Mat& g, std::vector<cv::Point>& landmark, cv::Mat& h);
+	bool eem(std::vector<cv::Point>& landmark, std::vector<cv::Point2f>& eem);
+	bool align(cv::Mat& g, std::vector<cv::Point2f>& eem, std::vector<cv::Point2f>& tri, cv::Size box, cv::Mat& h);
 
 	void showFace(cv::Mat & img, cv::Rect & face);
 	void showLandmark(cv::Mat& img, std::vector<cv::Point>& landmark);

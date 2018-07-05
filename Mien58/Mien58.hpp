@@ -9,9 +9,8 @@
 #ifndef Mien58_hpp
 #define Mien58_hpp
 	
-#include "MienDL.hpp"
-#include <opencv2/core.hpp>
-#include <opencv2/core/utility.hpp>
+#include "Mien/Mien.hpp"
+#include "MienDL/MienDL.hpp"
 
 class Mien58 {
 	MienDL _mien;

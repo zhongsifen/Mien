@@ -22,10 +22,6 @@ namespace MienConst {
 	const std::string _DAT_SP( _MODELDAT + "shape_predictor_68_face_landmarks.dat");
 	const std::string _DAT_NET(_MODELDAT + "dlib_face_recognition_resnet_model_v1.dat");
 
-	const cv::Point2f _eyeL(46, 21);
-	const cv::Point2f _eyeR(18, 21);
-	const cv::Size _box(64, 64);
-	const std::vector<cv::Point2f> _lrn = { _eyeL, _eyeR, };
 }
 
 class Landmark {

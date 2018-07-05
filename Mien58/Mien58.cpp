@@ -7,10 +7,6 @@
 //
 
 #include "Mien58.hpp"
-#include "dlib_cv.hpp"
-#include <dlib/opencv.h>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/highgui.hpp>
 
 bool Mien58::setup() {
 	
@@ -18,11 +14,9 @@ bool Mien58::setup() {
 }
 
 bool Mien58::setupCard(cv::Mat &img) {
-	dlib::matrix<rgb_pixel> chip;
-	dlib::matrix<float, 0, 1> descr;
-	_mien.descr(img, chip, descr);
-	_chips.push_back(chip);
-	_descrs.push_back(descr);
+	cv::Rect face;
+	std::vector<cv::Point> landmark;
+	std::vector<cv::Point2f> eem;
 	
 	return true;
 }
@@ -61,8 +55,3 @@ bool Mien58::run(cv::Mat &img, int &id, cv::Mat &ch) {
 	
 	return true;
 }
-
-
-
-
-
