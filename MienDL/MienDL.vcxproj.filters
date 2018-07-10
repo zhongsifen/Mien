@@ -18,24 +18,24 @@
     <ClInclude Include="dlib_cv.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Mien58.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MienDL.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MienNet.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Header.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Mien58.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MienDL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MienX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

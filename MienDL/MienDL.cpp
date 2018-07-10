@@ -61,3 +61,31 @@ bool MienDL::descr(cv::Mat& cvimg, dlib::matrix<rgb_pixel>& chip, dlib::matrix<f
 
 	return true;
 }
+
+bool MienDL::descr(cv::Mat& cvimg, dlib::matrix<float, 0, 1>& dsc) {
+	dlib::matrix<rgb_pixel> chip(dlib::cv_image<dlib::rgb_pixel>(cvimg));
+	dsc = _net(chip);
+
+	return true;
+}
+
+bool MienDL::descr(cv::Mat& cvimg, dlib::matrix<rgb_pixel>& chip, dlib::matrix<float, 0, 1>& dsc) {
+	dlib::cv_image<rgb_pixel> img;
+	dlib_cv::tdlib(cvimg, img);
+	std::vector<matrix<rgb_pixel>> faces;
+	for (auto face : _fd(img)) {
+		auto shape = _sp(img, face);
+		if (shape.num_parts() > 0) {
+			matrix<rgb_pixel> face_chip;
+			extract_image_chip(img, get_face_chip_details(shape, 150, 0.25), face_chip);
+			faces.push_back(std::move(face_chip));
+		}
+	}
+	if (faces.size() < 1) return false;
+	chip = faces[0];
+	dsc = _net(chip);
+	//std::vector<matrix<float, 0, 1>> face_descriptors = _net(faces);
+	//descr = face_descriptors[0];
+
+	return true;
+}

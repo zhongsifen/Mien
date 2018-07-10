@@ -21,7 +21,6 @@ namespace MienConst {
 	const std::string _MODELDAT(MienConfig::_M + "model/");
 	const std::string _DAT_SP( _MODELDAT + "shape_predictor_68_face_landmarks.dat");
 	const std::string _DAT_NET(_MODELDAT + "dlib_face_recognition_resnet_model_v1.dat");
-
 }
 
 class Landmark {
@@ -46,9 +45,8 @@ public:
 	bool beone(std::vector<Landmark>& landmarks, Landmark& landmark);
 	bool align(cv::Mat& f, Landmark& landmark, cv::Mat& h);
 	
-	//void showLandmark(cv::Mat& img, Landmark& landmark);
-	
 	bool descr(cv::Mat& img, dlib::matrix<dlib::rgb_pixel>& chip, dlib::matrix<float,0,1>& descr);
+	bool descr(cv::Mat & cvimg, dlib::matrix<float, 0, 1>& dsc);
 };
 
 #endif /* Mien_hpp */

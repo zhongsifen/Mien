@@ -82,8 +82,13 @@ namespace dlib_cv {
 	}
 
 	inline
-		void tdlib(cv::Mat& cvimg, dlib::cv_image<dlib::bgr_pixel>& dlimg) {
+	void tdlib(cv::Mat& cvimg, dlib::cv_image<dlib::bgr_pixel>& dlimg) {
 		dlimg = dlib::cv_image<dlib::bgr_pixel>(cvimg);
+	}
+
+	inline
+	void tdlib(cv::Mat& cvimg, dlib::cv_image < unsigned char > & dlimg) {
+		dlimg = dlib::cv_image<unsigned char>(cvimg);
 	}
 
 	inline

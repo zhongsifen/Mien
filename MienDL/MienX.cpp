@@ -74,7 +74,6 @@ bool MienDL::beone(std::vector<Landmark> &landmarks, Landmark &landmark) {
 }
 
 bool MienDL::align(cv::Mat& f, Landmark& landmark, cv::Mat& h) {
-	MienX::align(f, landmark.lrn, MienConst::_lrn, MienConst::_box, h);
 	
 	return true;
 }

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="algs.h" />
+    <ClInclude Include="any.h" />
+    <ClInclude Include="array.h" />
+    <ClInclude Include="array2d.h" />
+    <ClInclude Include="assert.h" />
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="bayes_utils.h" />
+    <ClInclude Include="bigint.h" />
+    <ClInclude Include="binary_search_tree.h" />
+    <ClInclude Include="bit_stream.h" />
+    <ClInclude Include="bound_function_pointer.h" />
+    <ClInclude Include="bridge.h" />
+    <ClInclude Include="bsp.h" />
+    <ClInclude Include="byte_orderer.h" />
+    <ClInclude Include="clustering.h" />
+    <ClInclude Include="cmd_line_parser.h" />
+    <ClInclude Include="compress_stream.h" />
+    <ClInclude Include="conditioning_class.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="config_reader.h" />
+    <ClInclude Include="console_progress_indicator.h" />
+    <ClInclude Include="control.h" />
+    <ClInclude Include="cpp_pretty_printer.h" />
+    <ClInclude Include="cpp_tokenizer.h" />
+    <ClInclude Include="crc32.h" />
+    <ClInclude Include="data_io.h" />
+    <ClInclude Include="directed_graph.h" />
+    <ClInclude Include="dir_nav.h" />
+    <ClInclude Include="disjoint_subsets.h" />
+    <ClInclude Include="dnn.h" />
+    <ClInclude Include="enable_if.h" />
+    <ClInclude Include="entropy_decoder.h" />
+    <ClInclude Include="entropy_decoder_model.h" />
+    <ClInclude Include="entropy_encoder.h" />
+    <ClInclude Include="entropy_encoder_model.h" />
+    <ClInclude Include="error.h" />
+    <ClInclude Include="filtering.h" />
+    <ClInclude Include="float_details.h" />
+    <ClInclude Include="geometry.h" />
+    <ClInclude Include="global_optimization.h" />
+    <ClInclude Include="graph.h" />
+    <ClInclude Include="graph_cuts.h" />
+    <ClInclude Include="graph_utils.h" />
+    <ClInclude Include="graph_utils_threaded.h" />
+    <ClInclude Include="gui_core.h" />
+    <ClInclude Include="gui_widgets.h" />
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="hash_map.h" />
+    <ClInclude Include="hash_set.h" />
+    <ClInclude Include="hash_table.h" />
+    <ClInclude Include="image_io.h" />
+    <ClInclude Include="image_keypoint.h" />
+    <ClInclude Include="image_processing.h" />
+    <ClInclude Include="image_transforms.h" />
+    <ClInclude Include="iosockstream.h" />
+    <ClInclude Include="is_kind.h" />
+    <ClInclude Include="linker.h" />
+    <ClInclude Include="logger.h" />
+    <ClInclude Include="lsh.h" />
+    <ClInclude Include="lz77_buffer.h" />
+    <ClInclude Include="lzp_buffer.h" />
+    <ClInclude Include="manifold_regularization.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="member_function_pointer.h" />
+    <ClInclude Include="memory_manager.h" />
+    <ClInclude Include="memory_manager_global.h" />
+    <ClInclude Include="memory_manager_stateless.h" />
+    <ClInclude Include="metaprogramming.h" />
+    <ClInclude Include="misc_api.h" />
+    <ClInclude Include="mlp.h" />
+    <ClInclude Include="noncopyable.h" />
+    <ClInclude Include="numerical_integration.h" />
+    <ClInclude Include="numeric_constants.h" />
+    <ClInclude Include="opencv.h" />
+    <ClInclude Include="optimization.h" />
+    <ClInclude Include="pipe.h" />
+    <ClInclude Include="pixel.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="python.h" />
+    <ClInclude Include="quantum_computing.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="rand.h" />
+    <ClInclude Include="random_forest.h" />
+    <ClInclude Include="ref.h" />
+    <ClInclude Include="reference_counter.h" />
+    <ClInclude Include="sequence.h" />
+    <ClInclude Include="serialize.h" />
+    <ClInclude Include="server.h" />
+    <ClInclude Include="set.h" />
+    <ClInclude Include="set_utils.h" />
+    <ClInclude Include="simd.h" />
+    <ClInclude Include="sliding_buffer.h" />
+    <ClInclude Include="smart_pointers.h" />
+    <ClInclude Include="smart_pointers_thread_safe.h" />
+    <ClInclude Include="sockets.h" />
+    <ClInclude Include="sockstreambuf.h" />
+    <ClInclude Include="sort.h" />
+    <ClInclude Include="sparse_vector.h" />
+    <ClInclude Include="sqlite.h" />
+    <ClInclude Include="stack.h" />
+    <ClInclude Include="stack_trace.h" />
+    <ClInclude Include="static_map.h" />
+    <ClInclude Include="static_set.h" />
+    <ClInclude Include="statistics.h" />
+    <ClInclude Include="std_allocator.h" />
+    <ClInclude Include="stl_checked.h" />
+    <ClInclude Include="string.h" />
+    <ClInclude Include="svm.h" />
+    <ClInclude Include="svm_threaded.h" />
+    <ClInclude Include="sync_extension.h" />
+    <ClInclude Include="test_for_odr_violations.h" />
+    <ClInclude Include="threads.h" />
+    <ClInclude Include="timeout.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="time_this.h" />
+    <ClInclude Include="timing.h" />
+    <ClInclude Include="tokenizer.h" />
+    <ClInclude Include="tuple.h" />
+    <ClInclude Include="type_safe_union.h" />
+    <ClInclude Include="uintn.h" />
+    <ClInclude Include="unicode.h" />
+    <ClInclude Include="unordered_pair.h" />
+    <ClInclude Include="vectorstream.h" />
+    <ClInclude Include="windows_magic.h" />
+    <ClInclude Include="xml_parser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="all\source.cpp" />
+    <ClCompile Include="stack_trace.cpp" />
+    <ClCompile Include="test_for_odr_violations.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{046E72E5-2A43-4F5E-9AF5-101BEBF3D48B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dlib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
