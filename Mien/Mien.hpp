@@ -1,6 +1,18 @@
 #pragma once
 
 #include <opencv2/core.hpp>
+#include <dlib/array2d.h>
+
+namespace MienType {
+	typedef cv::Mat Image;
+	typedef cv::Mat_<uint8_t> Gray;
+	typedef cv::Rect Face;
+	typedef std::vector<cv::Point> Landmark;
+	typedef cv::Mat Chip;
+
+	typedef dlib::matrix<dlib::rgb_pixel> Chip_D;
+	typedef dlib::matrix<float, 0, 1> Desc_D;
+}
 
 class Mien {
 protected:
@@ -14,7 +26,7 @@ public:
 	bool eem(std::vector<cv::Point>& landmark, std::vector<cv::Point2f>& eem);
 	bool align(cv::Mat& g, std::vector<cv::Point2f>& eem, std::vector<cv::Point2f>& tri, cv::Size box, cv::Mat& h);
 
-	void showFace(cv::Mat & img, cv::Rect & face);
-	void showLandmark(cv::Mat& img, std::vector<cv::Point>& landmark);
+	void showFace(cv::Mat & img, MienType::Face & face);
+	void showLandmark(cv::Mat& img, MienType::Landmark & landmark);
 	void showEEM(cv::Mat & img, std::vector<cv::Point2f> eem);
 };

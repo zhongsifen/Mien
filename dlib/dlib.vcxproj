@@ -64,12 +64,10 @@
     <ClInclude Include="graph_utils.h" />
     <ClInclude Include="graph_utils_threaded.h" />
     <ClInclude Include="gui_core.h" />
-    <ClInclude Include="gui_widgets.h" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="hash_map.h" />
     <ClInclude Include="hash_set.h" />
     <ClInclude Include="hash_table.h" />
-    <ClInclude Include="image_io.h" />
     <ClInclude Include="image_keypoint.h" />
     <ClInclude Include="image_processing.h" />
     <ClInclude Include="image_transforms.h" />
