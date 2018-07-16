@@ -38,21 +38,14 @@ protected:
 
 public:
 	MienDL();
-
-	bool detect(cv::Mat& gray, cv::Rect& face, std::vector<cv::Point>& landmark);
-
-	bool detect(cv::Mat& img, std::vector<Landmark>& landmarks);
-	bool beone(std::vector<Landmark>& landmarks, Landmark& landmark);
-	bool align(cv::Mat& f, Landmark& landmark, cv::Mat& h);
-	
-	bool descr(cv::Mat& img, dlib::matrix<dlib::rgb_pixel>& chip, dlib::matrix<float,0,1>& descr);
-	bool descr(cv::Mat & cvimg, dlib::matrix<float, 0, 1>& dsc);
+	~MienDL();
 
 	bool face(MienType::Gray& gray, MienType::Face& face);
 	bool landmark(MienType::Gray & gray, cv::Rect & r, MienType::Landmark & landmark);
 	bool chip(MienType::Image & image, cv::Rect & r, MienType::Chip & chip);
-	bool desc(MienType::Chip & chip, MienType::Desc_D & desc);
-	bool desc(MienType::Image & image, MienType::Chip & chip, MienType::Desc_D & desc);
+	bool desc(MienType::Chip & chip, MienType::Desc & desc);
+	bool desc(MienType::Image & image, cv::Rect & r, MienType::Chip & chip, MienType::Desc & desc);
+	bool desc(MienType::Image & image, MienType::Chip & chip, MienType::Desc & desc);
 };
 
 #endif /* Mien_hpp */

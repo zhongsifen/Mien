@@ -9,6 +9,7 @@ namespace MienType {
 	typedef cv::Rect Face;
 	typedef std::vector<cv::Point> Landmark;
 	typedef cv::Mat Chip;
+	typedef cv::Mat Desc;
 
 	typedef dlib::matrix<dlib::rgb_pixel> Chip_D;
 	typedef dlib::matrix<float, 0, 1> Desc_D;
