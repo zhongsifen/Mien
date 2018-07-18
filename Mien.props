@@ -3,17 +3,8 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>
-        $(SolutionDir)LandmarkDetector\include;
-        $(SolutionDir)FaceAnalyser\include;
-        $(SolutionDir)GazeAnalyser\include;
-        $(SolutionDir)Utilities\include;
         $(local)\include;
         $(local)\opencv\build\include;
-        $(local)\boost\include;
-        $(local)\tbb\include;
-        $(local)\openBLAS\include;
-        $(local)\dlib\include;
-        $(local)\dlib\include\dlib\dnn;
         %(AdditionalIncludeDirectories)
       </AdditionalIncludeDirectories>
     </ClCompile>
@@ -21,19 +12,9 @@
       <AdditionalLibraryDirectories>
         $(local)\lib;
         $(local)\opencv\build\x64\vc15\lib;
-        $(local)\boost\lib;
-        $(local)\tbb\lib\intel64\vc14_uwp;
-        $(local)\openBLAS\lib;
-        $(local)\dlib\lib;
         %(AdditionalLibraryDirectories)
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>
-        opencv_world341.lib;
-        tbb.lib;
-        openblas.lib;
-        dlib19.10.99_release_64bit_msvc1914.lib;
-        %(AdditionalDependencies)
-      </AdditionalDependencies>
+      <AdditionalDependencies>opencv_world341.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
 </Project>

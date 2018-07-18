@@ -392,12 +392,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stack_trace.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="test_for_odr_violations.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="all\source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -58,9 +58,6 @@
 #include "../timer/timer.cpp"
 #include "../stack_trace.cpp"
 
-#include "../cuda/cpu_dlib.cpp"
-#include "../cuda/tensor_tools.cpp"
-
 #endif // DLIB_ISO_CPP_ONLY
 
 

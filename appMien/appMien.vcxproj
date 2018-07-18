@@ -38,11 +38,11 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\Mien.props" />
+    <Import Project="..\Mien.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\Mien.props" />
+    <Import Project="..\Mien.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -88,6 +88,9 @@
     <ClCompile Include="appMien.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\dlib\dlib.vcxproj">
+      <Project>{046e72e5-2a43-4f5e-9af5-101bebf3d48b}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MienDL\MienDL.vcxproj">
       <Project>{6f9744b5-85f1-4440-82db-d26e7d801230}</Project>
     </ProjectReference>

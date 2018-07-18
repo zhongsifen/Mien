@@ -45,7 +45,7 @@ public:
 	bool chip(MienType::Image & image, cv::Rect & r, MienType::Chip & chip);
 	bool desc(MienType::Chip & chip, MienType::Desc & desc);
 	bool desc(MienType::Image & image, cv::Rect & r, MienType::Chip & chip, MienType::Desc & desc);
-	bool desc(MienType::Image & image, MienType::Chip & chip, MienType::Desc & desc);
+	//bool desc(MienType::Image & image, MienType::Chip & chip, MienType::Desc & desc);
 };
 
 #endif /* Mien_hpp */
