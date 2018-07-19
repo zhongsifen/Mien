@@ -59,6 +59,11 @@ bool MienDL::landmark(MienType::Gray & gray, cv::Rect & r, MienType::Landmark & 
 	return true;
 }
 
+bool MienDL::chip(MienType::Image & image, MienType::EEM & eem, MienType::EEM & tri, cv::Size & box, MienType::Chip & chip)
+{
+	return Mien::chip(image, eem, tri, box, chip);
+}
+
 bool MienDL::chip(MienType::Image & image, cv::Rect & r, MienType::Chip & chip)
 {
 	dlib::cv_image<rgb_pixel> image_d;

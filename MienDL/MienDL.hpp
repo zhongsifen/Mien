@@ -42,6 +42,7 @@ public:
 
 	bool face(MienType::Gray& gray, MienType::Face& face);
 	bool landmark(MienType::Gray & gray, cv::Rect & r, MienType::Landmark & landmark);
+	bool chip(MienType::Image & image, MienType::EEM & eem, MienType::EEM & tri, cv::Size & box, MienType::Chip & chip);
 	bool chip(MienType::Image & image, cv::Rect & r, MienType::Chip & chip);
 	bool desc(MienType::Chip & chip, MienType::Desc & desc);
 	bool desc(MienType::Image & image, cv::Rect & r, MienType::Chip & chip, MienType::Desc & desc);

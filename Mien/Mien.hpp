@@ -10,6 +10,7 @@ namespace MienType {
 	typedef std::vector<cv::Point> Landmark;
 	typedef cv::Mat Chip;
 	typedef cv::Mat Desc;
+	typedef std::vector<cv::Point2f> EEM;
 
 	typedef dlib::matrix<dlib::rgb_pixel> Chip_D;
 	typedef dlib::matrix<float, 0, 1> Desc_D;
@@ -23,11 +24,10 @@ public:
 	Mien() {  }
 	~Mien() {  }
 
-	//bool virtual detect(cv::Mat& g, cv::Rect& face, std::vector<cv::Point>& landmark) = 0;
-	bool eem(std::vector<cv::Point>& landmark, std::vector<cv::Point2f>& eem);
-	bool align(cv::Mat& g, std::vector<cv::Point2f>& eem, std::vector<cv::Point2f>& tri, cv::Size box, cv::Mat& h);
+	bool eem(MienType::Landmark landmark, MienType::EEM & eem);
+	bool chip(MienType::Image & image, MienType::EEM & eem, MienType::EEM & tri, cv::Size & box, MienType::Chip & chip);
 
 	void showFace(cv::Mat & img, MienType::Face & face);
-	void showLandmark(cv::Mat& img, MienType::Landmark & landmark);
-	void showEEM(cv::Mat & img, std::vector<cv::Point2f> eem);
+	void showLandmark(cv::Mat & img, MienType::Landmark & landmark);
+	void showEEM(cv::Mat & img, MienType::EEM & eem);
 };
