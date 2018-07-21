@@ -86,7 +86,7 @@
   <ItemGroup>
     <ClInclude Include="dlib_cv.hpp" />
     <ClInclude Include="MienDL.hpp" />
-    <ClInclude Include="MienNet.hpp" />
+    <ClInclude Include="MienAnet.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MienDL.cpp" />

@@ -8,8 +8,14 @@
 
 #include "Mien58.hpp"
 
-bool Mien58::setup() {
-	
+bool Mien58::setup()
+{
+	_tri.resize(3);
+	_tri[0] = _e1;
+	_tri[1] = Mien58::_e2;
+	_tri[2] = Mien58::_m;
+	_box = Mien58::_r;
+
 	return true;
 }
 
@@ -21,18 +27,19 @@ bool Mien58::setupCard(cv::Mat &img) {
 	return true;
 }
 
-bool Mien58::setupCard(std::vector<cv::Mat> &imgs) {
-	int n = (int)imgs.size();
-	_chips.resize(n);
-	_descrs.resize(n);
-	for (int i=0; i<n; ++i) {
-		//_mien.descr(imgs[i], _chips[i], _descrs[i]);
-	}
-	
+bool Mien58::runFace(MienType::Image & image, MienType::Face & face)
+{
+	MienType::Gray gray;
+	this->_mien.gray(image, gray);
+	this->_mien.face(gray, face);
+
 	return true;
 }
+#if 0
+	cv::Mat w = image.clone();
+	this->_mien.showFace(w, face);
+	cv::imshow("w", w);	cv::waitKey();
 
-bool Mien58::run(cv::Mat &img, int &id, cv::Mat &ch) {
 	//MienType::Chip chip;
 	//MienType::Desc desc;
 	//bool ret = _mien.desc(img, chip, desc);	if (!ret) return false;
@@ -55,3 +62,4 @@ bool Mien58::run(cv::Mat &img, int &id, cv::Mat &ch) {
 	//
 	return true;
 }
+#endif

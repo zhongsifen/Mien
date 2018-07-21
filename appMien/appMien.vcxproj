@@ -91,6 +91,9 @@
     <ProjectReference Include="..\dlib\dlib.vcxproj">
       <Project>{046e72e5-2a43-4f5e-9af5-101bebf3d48b}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Mien58\Mien58.vcxproj">
+      <Project>{a88e629f-746b-433c-a78b-769b9ef32794}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MienDL\MienDL.vcxproj">
       <Project>{6f9744b5-85f1-4440-82db-d26e7d801230}</Project>
     </ProjectReference>

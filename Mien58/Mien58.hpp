@@ -12,23 +12,21 @@
 #include "Mien/Mien.hpp"
 #include "MienDL/MienDL.hpp"
 
-namespace MienConst {
+class Mien58 {
 	// dlib_face_recognition_resnet_model_v1.dat uses (150, 150)
 	const cv::Size _r = cv::Size(150, 150);
 	const cv::Point2f _e1 = cv::Point2f(47, 44);
 	const cv::Point2f _e2 = cv::Point2f(103, 44);
 	const cv::Point2f _m = cv::Point2f(75, 102);
-};
 
-class Mien58 {
 	MienDL _mien;
-	std::vector<dlib::matrix<dlib::rgb_pixel>> _chips;
-	std::vector<dlib::matrix<float, 0, 1>> _descrs;
+	MienType::EEM _tri;
+	cv::Size _box;
 public:
 	bool setup();
 	bool setupCard(cv::Mat& img);
-	bool setupCard(std::vector<cv::Mat>& imgs);
-	bool run(cv::Mat& img, int& id, cv::Mat& ch);
+	bool runFace(MienType::Image & image, MienType::Face & face);
+	bool run(MienType::Image & image);
 };
 
 #endif /* Mien58_hpp */

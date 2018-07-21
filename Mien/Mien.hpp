@@ -24,6 +24,7 @@ public:
 	Mien() {  }
 	~Mien() {  }
 
+	bool gray(MienType::Image & image, MienType::Gray & gray);
 	bool eem(MienType::Landmark landmark, MienType::EEM & eem);
 	bool chip(MienType::Image & image, MienType::EEM & eem, MienType::EEM & tri, cv::Size & box, MienType::Chip & chip);
 

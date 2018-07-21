@@ -13,8 +13,8 @@
 MienDL::MienDL()
 {
 	_fd = dlib::get_frontal_face_detector();
-	dlib::deserialize(MienConst::_DAT_SP) >> _sp;
-	dlib::deserialize(MienConst::_DAT_NET) >> _net;
+	dlib::deserialize(MienModel::_DAT_SP) >> _sp;
+	dlib::deserialize(MienModel::_DAT_NET) >> _net;
 }
 
 MienDL::~MienDL()

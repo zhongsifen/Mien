@@ -15,9 +15,9 @@
 #include "dlib_cv.hpp"
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/dnn.h>
-#include "MienNet.hpp"
+#include "MienAnet.hpp"
 
-namespace MienConst {
+namespace MienModel {
 	const std::string _MODELDAT(MienConfig::_M + "model/");
 	const std::string _DAT_SP( _MODELDAT + "shape_predictor_68_face_landmarks.dat");
 	const std::string _DAT_NET(_MODELDAT + "dlib_face_recognition_resnet_model_v1.dat");

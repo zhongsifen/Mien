@@ -21,7 +21,7 @@
     <ClInclude Include="MienDL.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MienNet.hpp">
+    <ClInclude Include="MienAnet.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
