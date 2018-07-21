@@ -27,9 +27,9 @@ bool Mien58::setupCard(cv::Mat &img) {
 	return true;
 }
 
-bool Mien58::runFace(MienType::Image & image, MienType::Face & face)
+bool Mien58::runFace(Mien::Image & image, Mien::Face & face)
 {
-	MienType::Gray gray;
+	Mien::Gray gray;
 	this->_mien.gray(image, gray);
 	this->_mien.face(gray, face);
 
@@ -40,8 +40,8 @@ bool Mien58::runFace(MienType::Image & image, MienType::Face & face)
 	this->_mien.showFace(w, face);
 	cv::imshow("w", w);	cv::waitKey();
 
-	//MienType::Chip chip;
-	//MienType::Desc desc;
+	//Mien::Chip chip;
+	//Mien::Desc desc;
 	//bool ret = _mien.desc(img, chip, desc);	if (!ret) return false;
 	//double score = 100;
 	//int index = id = -1;

@@ -20,13 +20,13 @@ class Mien58 {
 	const cv::Point2f _m = cv::Point2f(75, 102);
 
 	MienDL _mien;
-	MienType::EEM _tri;
+	Mien::EEM _tri;
 	cv::Size _box;
 public:
 	bool setup();
 	bool setupCard(cv::Mat& img);
-	bool runFace(MienType::Image & image, MienType::Face & face);
-	bool run(MienType::Image & image);
+	bool runFace(Mien::Image & image, Mien::Face & face);
+	bool run(Mien::Image & image);
 };
 
 #endif /* Mien58_hpp */

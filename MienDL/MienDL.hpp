@@ -44,13 +44,13 @@ public:
 	MienDL();
 	~MienDL();
 
-	bool face(MienType::Gray& gray, MienType::Face& face);
-	bool landmark(MienType::Gray & gray, cv::Rect & r, MienType::Landmark & landmark);
-	bool chip(MienType::Image & image, MienType::EEM & eem, MienType::EEM & tri, cv::Size & box, MienType::Chip & chip);
-	bool chip(MienType::Image & image, cv::Rect & r, MienType::Chip & chip);
-	bool desc(MienType::Chip & chip, MienType::Desc & desc);
-	bool desc(MienType::Image & image, cv::Rect & r, MienType::Chip & chip, MienType::Desc & desc);
-	//bool desc(MienType::Image & image, MienType::Chip & chip, MienType::Desc & desc);
+	bool face(Mien::Gray& gray, Mien::Face& face);
+	bool landmark(Mien::Gray & gray, cv::Rect & r, Mien::Landmark & landmark);
+	bool chip(Mien::Image & image, Mien::EEM & eem, Mien::EEM & tri, cv::Size & box, Mien::Chip & chip);
+	bool chip(Mien::Image & image, cv::Rect & r, Mien::Chip & chip);
+	bool desc(Mien::Chip & chip, Mien::Desc & desc);
+	bool desc(Mien::Image & image, cv::Rect & r, Mien::Chip & chip, Mien::Desc & desc);
+	//bool desc(Mien::Image & image, Mien::Chip & chip, Mien::Desc & desc);
 };
 
 #endif /* Mien_hpp */

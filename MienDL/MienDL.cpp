@@ -22,7 +22,7 @@ MienDL::~MienDL()
 
 }
 
-bool MienDL::face(MienType::Gray & gray, MienType::Face & face)
+bool MienDL::face(Mien::Gray & gray, Mien::Face & face)
 {
 	std::vector<std::pair<double, dlib::rectangle>> dets;
 	_fd(dlib::cv_image<uint8_t>(gray), dets);
@@ -43,7 +43,7 @@ bool MienDL::face(MienType::Gray & gray, MienType::Face & face)
 	return true;
 }
 
-bool MienDL::landmark(MienType::Gray & gray, cv::Rect & r, MienType::Landmark & landmark)
+bool MienDL::landmark(Mien::Gray & gray, cv::Rect & r, Mien::Landmark & landmark)
 {
 	dlib::cv_image<uint8_t> gray_d(gray);
 	dlib::rectangle r_d;
@@ -59,16 +59,16 @@ bool MienDL::landmark(MienType::Gray & gray, cv::Rect & r, MienType::Landmark & 
 	return true;
 }
 
-bool MienDL::chip(MienType::Image & image, MienType::EEM & eem, MienType::EEM & tri, cv::Size & box, MienType::Chip & chip)
+bool MienDL::chip(Mien::Image & image, Mien::EEM & eem, Mien::EEM & tri, cv::Size & box, Mien::Chip & chip)
 {
 	return Mien::chip(image, eem, tri, box, chip);
 }
 
-bool MienDL::chip(MienType::Image & image, cv::Rect & r, MienType::Chip & chip)
+bool MienDL::chip(Mien::Image & image, cv::Rect & r, Mien::Chip & chip)
 {
 	dlib::cv_image<rgb_pixel> image_d;
 	dlib_cv::tdlib(image, image_d);
-	MienType::Gray gray;
+	Mien::Gray gray;
 	cv::cvtColor(image, gray, CV_BGR2GRAY);
 	dlib::cv_image<uint8_t> gray_d(gray);
 	dlib::rectangle r_d;
@@ -83,7 +83,7 @@ bool MienDL::chip(MienType::Image & image, cv::Rect & r, MienType::Chip & chip)
 	return true;
 }
 
-bool MienDL::desc(MienType::Chip & chip, MienType::Desc & desc)
+bool MienDL::desc(Mien::Chip & chip, Mien::Desc & desc)
 {
 	dlib::cv_image<dlib::rgb_pixel> cvimg(chip);
 	dlib::matrix<rgb_pixel> chip_d;
@@ -94,11 +94,11 @@ bool MienDL::desc(MienType::Chip & chip, MienType::Desc & desc)
 	return true;
 }
 
-bool MienDL::desc(MienType::Image & image, cv::Rect & r, MienType::Chip & chip, MienType::Desc & desc)
+bool MienDL::desc(Mien::Image & image, cv::Rect & r, Mien::Chip & chip, Mien::Desc & desc)
 {
 	dlib::cv_image<rgb_pixel> image_d;
 	dlib_cv::tdlib(image, image_d);
-	MienType::Gray gray;
+	Mien::Gray gray;
 	cv::cvtColor(image, gray, CV_BGR2GRAY);
 	dlib::cv_image<uint8_t> gray_d(gray);
 	dlib::rectangle r_d;
