@@ -76,7 +76,7 @@ bool MienDL::chip(MienType::Image & image, cv::Rect & r, MienType::Chip & chip)
 	dlib::full_object_detection shape = _sp(gray_d, r_d);
 	int n = shape.num_parts();
 	if (n < 1) return false;
-	MienType::Chip_D chip_d;
+	Chip_D chip_d;
 	extract_image_chip(image_d, get_face_chip_details(shape, 150, 0.25), chip_d);
 	chip = dlib::toMat(chip_d);
 
@@ -106,7 +106,7 @@ bool MienDL::desc(MienType::Image & image, cv::Rect & r, MienType::Chip & chip, 
 	dlib::full_object_detection shape = _sp(gray_d, r_d);
 	int n = shape.num_parts();
 	if (n < 1) return false;
-	MienType::Chip_D chip_d;
+	Chip_D chip_d;
 	extract_image_chip(image_d, get_face_chip_details(shape, 150, 0.25), chip_d);
 	chip = dlib::toMat(chip_d);
 	std::vector<dlib::matrix<rgb_pixel>> chips(1, chip_d);

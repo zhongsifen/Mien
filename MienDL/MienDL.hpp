@@ -31,6 +31,10 @@ public:
 };
 
 class MienDL : public Mien {
+public:
+	typedef dlib::matrix<dlib::rgb_pixel> Chip_D;
+	typedef dlib::matrix<float, 0, 1> Desc_D;
+
 protected:
 	dlib::frontal_face_detector _fd;
 	dlib::shape_predictor _sp;
