@@ -21,15 +21,12 @@
     <ClInclude Include="MienDL.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MienAnet.hpp">
+    <ClInclude Include="dlib_anet.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MienDL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MienX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

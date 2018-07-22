@@ -86,11 +86,10 @@
   <ItemGroup>
     <ClInclude Include="dlib_cv.hpp" />
     <ClInclude Include="MienDL.hpp" />
-    <ClInclude Include="MienAnet.hpp" />
+    <ClInclude Include="dlib_anet.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MienDL.cpp" />
-    <ClCompile Include="MienX.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

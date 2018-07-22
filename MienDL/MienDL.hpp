@@ -13,22 +13,14 @@
 #include "MienConfig.hpp"
 
 #include "dlib_cv.hpp"
+#include "dlib_anet.hpp"
 #include <dlib/image_processing/frontal_face_detector.h>
-#include <dlib/dnn.h>
-#include "MienAnet.hpp"
 
 namespace MienModel {
 	const std::string _MODELDAT(MienConfig::_M + "model/");
 	const std::string _DAT_SP( _MODELDAT + "shape_predictor_68_face_landmarks.dat");
 	const std::string _DAT_NET(_MODELDAT + "dlib_face_recognition_resnet_model_v1.dat");
 }
-
-class Landmark {
-public:
-	double weight;
-	cv::Rect box;
-	std::vector<cv::Point2f> lrn;
-};
 
 class MienDL : public Mien {
 public:
