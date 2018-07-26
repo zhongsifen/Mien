@@ -1,5 +1,6 @@
 #pragma once
 
+#include "MienConfig.hpp"
 #include <opencv2/core.hpp>
 
 class Mien {
@@ -13,10 +14,11 @@ public:
 	typedef std::vector<cv::Point2f> EEM;
 
 protected:
-	const int _nfp = 68;	// number of feature points
+	const int _nfp =  68;	// number of feature points
+	const int _ndv = 128;	// number of description values
 
 public:
-	Mien() {  }
+	Mien();
 	~Mien() {  }
 
 	bool gray(Image & image, Gray & gray);
@@ -24,7 +26,8 @@ public:
 	bool chip(Image & image, EEM & eem, EEM & tri, cv::Size & box, Chip & chip);
 	float measure(Desc & d1, Desc & d2);
 
-	void showFace(cv::Mat & img, Face & face);
-	void showLandmark(cv::Mat & img, Landmark & landmark);
-	void showEEM(cv::Mat & img, EEM & eem);
+
+	static void showFace(cv::Mat & img, Face & face);
+	static void showLandmark(cv::Mat & img, Landmark & landmark);
+	static void showEEM(cv::Mat & img, EEM & eem);
 };

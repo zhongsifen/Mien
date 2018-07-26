@@ -10,6 +10,8 @@
 #include "dlib_cv.hpp"
 #include <opencv2/opencv.hpp>
 
+#include <dlib/gui_widgets.h>
+
 MienDL::MienDL()
 {
 	_fd = dlib::get_frontal_face_detector();
@@ -66,19 +68,21 @@ bool MienDL::chip(Mien::Image & image, Mien::EEM & eem, Mien::EEM & tri, cv::Siz
 
 bool MienDL::chip(Mien::Image & image, cv::Rect & r, Mien::Chip & chip)
 {
-	dlib::cv_image<rgb_pixel> image_d;
-	dlib_cv::tdlib(image, image_d);
-	Mien::Gray gray;
-	cv::cvtColor(image, gray, CV_BGR2GRAY);
-	dlib::cv_image<uint8_t> gray_d(gray);
+	dlib::cv_image<rgb_pixel> image_d(image);
+	//dlib_cv::tdlib(image, image_d);
+	//Mien::Gray gray;
+	//cv::cvtColor(image, gray, CV_BGR2GRAY);
+	//dlib::cv_image<uint8_t> gray_d(gray);
 	dlib::rectangle r_d;
 	dlib_cv::tdlib(r, r_d);
-	dlib::full_object_detection shape = _sp(gray_d, r_d);
+	dlib::full_object_detection shape = _sp(image_d, r_d);
 	int n = shape.num_parts();
 	if (n < 1) return false;
 	Chip_D chip_d;
 	extract_image_chip(image_d, get_face_chip_details(shape, 150, 0.25), chip_d);
 	chip = dlib::toMat(chip_d);
+
+	dlib::image_window win(chip_d);
 
 	return true;
 }

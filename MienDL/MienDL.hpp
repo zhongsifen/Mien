@@ -10,7 +10,6 @@
 #define Mien_hpp
 
 #include "Mien/Mien.hpp"
-#include "MienConfig.hpp"
 
 #include "dlib_cv.hpp"
 #include "dlib_anet.hpp"
@@ -30,7 +29,7 @@ public:
 protected:
 	dlib::frontal_face_detector _fd;
 	dlib::shape_predictor _sp;
-	anet_type _net;
+	dlib_anet::anet_type _net;
 
 public:
 	MienDL();

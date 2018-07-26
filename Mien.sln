@@ -15,6 +15,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mien58", "Mien58\Mien58.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dlib", "dlib\dlib.vcxproj", "{046E72E5-2A43-4F5E-9AF5-101BEBF3D48B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dlibExample", "dlibExample\dlibExample.vcxproj", "{5D17B872-38F8-4334-A2CD-A128B93908E2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dlibIO", "dlib\dlibIO.vcxproj", "{E2CFA0A4-FA9F-4F19-BFB6-AEA37F571C10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -59,6 +63,18 @@ Global
 		{046E72E5-2A43-4F5E-9AF5-101BEBF3D48B}.Release|x64.ActiveCfg = Release|x64
 		{046E72E5-2A43-4F5E-9AF5-101BEBF3D48B}.Release|x64.Build.0 = Release|x64
 		{046E72E5-2A43-4F5E-9AF5-101BEBF3D48B}.Release|x86.ActiveCfg = Release|x64
+		{5D17B872-38F8-4334-A2CD-A128B93908E2}.Debug|x64.ActiveCfg = Debug|x64
+		{5D17B872-38F8-4334-A2CD-A128B93908E2}.Debug|x64.Build.0 = Debug|x64
+		{5D17B872-38F8-4334-A2CD-A128B93908E2}.Debug|x86.ActiveCfg = Debug|x64
+		{5D17B872-38F8-4334-A2CD-A128B93908E2}.Release|x64.ActiveCfg = Release|x64
+		{5D17B872-38F8-4334-A2CD-A128B93908E2}.Release|x64.Build.0 = Release|x64
+		{5D17B872-38F8-4334-A2CD-A128B93908E2}.Release|x86.ActiveCfg = Release|x64
+		{E2CFA0A4-FA9F-4F19-BFB6-AEA37F571C10}.Debug|x64.ActiveCfg = Debug|x64
+		{E2CFA0A4-FA9F-4F19-BFB6-AEA37F571C10}.Debug|x64.Build.0 = Debug|x64
+		{E2CFA0A4-FA9F-4F19-BFB6-AEA37F571C10}.Debug|x86.ActiveCfg = Debug|x64
+		{E2CFA0A4-FA9F-4F19-BFB6-AEA37F571C10}.Release|x64.ActiveCfg = Release|x64
+		{E2CFA0A4-FA9F-4F19-BFB6-AEA37F571C10}.Release|x64.Build.0 = Release|x64
+		{E2CFA0A4-FA9F-4F19-BFB6-AEA37F571C10}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

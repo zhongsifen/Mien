@@ -11,6 +11,7 @@
 	
 #include "Mien/Mien.hpp"
 #include "MienDL/MienDL.hpp"
+#include "MienFD/MienFD.hpp"
 
 class Mien58 {
 	// dlib_face_recognition_resnet_model_v1.dat uses (150, 150)
@@ -26,7 +27,8 @@ public:
 	bool setup();
 	bool setupCard(cv::Mat& img);
 	bool runFace(Mien::Image & image, Mien::Face & face);
-	bool run(Mien::Image & image);
+	bool runChip(Mien::Image & image, cv::Rect & r, Mien::Chip & chip);
+	bool runDesc(Mien::Chip & chip, Mien::Desc & desc);
 };
 
 #endif /* Mien58_hpp */

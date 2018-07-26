@@ -1,17 +1,18 @@
 //
-//  MienNet.hpp
-//  Mien58
+//  dlib_anet.hpp
+//  MienDL
 //
 //  Created by SIFEN ZHONG on 12/10/2017.
 //  Copyright © 2017 ___ZHONGSIFEN___. All rights reserved.
 //
 
-#ifndef MienNet_h
-#define MienNet_h
+#ifndef dlib_anet_h
+#define dlib_anet_h
 
 #include <dlib/dnn.h>
 using namespace dlib;
 
+namespace dlib_anet {
 template <template <int,template<typename>class,int,typename> class block, int N, template<typename>class BN, typename SUBNET>
 using residual = add_prev1<block<N,BN,1,tag1<SUBNET>>>;
 
@@ -39,5 +40,6 @@ alevel4<
 max_pool<3,3,2,2,relu<affine<con<32,7,7,2,2,
 input_rgb_image_sized<150>
 >>>>>>>>>>>>;
+}
 
-#endif /* MienNet_h */
+#endif /* dlib_anet_h */
