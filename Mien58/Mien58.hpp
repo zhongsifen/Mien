@@ -24,11 +24,10 @@ class Mien58 {
 	Mien::EEM _tri;
 	cv::Size _box;
 public:
+	void getTri(Mien::EEM & tri, cv::Size & box) { tri = _tri; box = _box; }
+	MienDL* getMien() { return &_mien; }
 	bool setup();
 	bool setupCard(cv::Mat& img);
-	bool runFace(Mien::Image & image, Mien::Face & face);
-	bool runChip(Mien::Image & image, cv::Rect & r, Mien::Chip & chip);
-	bool runDesc(Mien::Chip & chip, Mien::Desc & desc);
 };
 
 #endif /* Mien58_hpp */

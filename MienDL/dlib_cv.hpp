@@ -14,22 +14,9 @@
 #include <dlib/array2d.h>
 #include <dlib/image_processing.h>
 
-namespace dlib_cv {
-	inline
-	void fdlib(dlib::array2d<dlib::bgr_pixel>& dlimg, cv::Mat& cvimg) {
-		cvimg = dlib::toMat(dlimg);
-	}
-	
-	inline
-	void fdlib(dlib::array2d<dlib::rgb_pixel>& dlimg, cv::Mat& cvimg) {
-		cvimg = dlib::toMat(dlimg);
-	}
+#include "MienDL.hpp"
 
-	inline
-	void fdlib(dlib::array2d<uint8_t>& dlimg, cv::Mat& cvimg) {
-		cvimg = dlib::toMat(dlimg);
-	}
-	
+namespace dlib_cv {
 	inline
 	void fdlib(dlib::point& dlp, cv::Point& cvp) {
 		cvp.x = (int)dlp.x();

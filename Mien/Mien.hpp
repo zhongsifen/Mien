@@ -21,10 +21,10 @@ public:
 	Mien();
 	~Mien() {  }
 
-	bool gray(Image & image, Gray & gray);
-	bool eem(Landmark landmark, EEM & eem);
-	bool chip(Image & image, EEM & eem, EEM & tri, cv::Size & box, Chip & chip);
-	float measure(Desc & d1, Desc & d2);
+	bool doGray(Image & image, Gray & gray);
+	bool doEem(Landmark & landmark, EEM & eem);
+	bool doChipTri(Image & image, EEM & eem, EEM & tri, cv::Size & box, Chip & chip);
+	float doMeasure(Desc & d1, Desc & d2);
 
 
 	static void showFace(cv::Mat & img, Face & face);
