@@ -20,12 +20,14 @@ class Mien58 {
 	const cv::Point2f _e2 = cv::Point2f(103, 44);
 	const cv::Point2f _m = cv::Point2f(75, 102);
 
-	MienDL _mien;
+	MienDL _mien_dl;
+	MienFD _mien_fd;
 	Mien::EEM _tri;
 	cv::Size _box;
 public:
 	void getTri(Mien::EEM & tri, cv::Size & box) { tri = _tri; box = _box; }
-	MienDL* getMien() { return &_mien; }
+	MienDL* getMienDL() { return &_mien_dl; }
+	MienFD* getMeinFD() { return &_mien_fd; }
 	bool setup();
 	bool setupCard(cv::Mat& img);
 };
