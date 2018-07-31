@@ -86,6 +86,7 @@
   <ItemGroup>
     <ClCompile Include="..\Mien3rd.cpp" />
     <ClCompile Include="appMien.cpp" />
+    <ClCompile Include="pikaqiu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dlib\dlib.vcxproj">
@@ -102,6 +103,9 @@
     </ProjectReference>
     <ProjectReference Include="..\Mien\Mien.vcxproj">
       <Project>{cdf44ec3-d88e-467d-a693-000a49496730}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\mtcnn\mtcnn.vcxproj">
+      <Project>{7c78d6ae-42bd-40d4-a05e-787d521cc12f}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

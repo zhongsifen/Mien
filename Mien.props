@@ -5,6 +5,7 @@
       <AdditionalIncludeDirectories>
         $(local)\include;
         $(local)\opencv\build\include;
+        $(local)\openBlas\include;
         %(AdditionalIncludeDirectories)
       </AdditionalIncludeDirectories>
     </ClCompile>
@@ -12,6 +13,7 @@
       <AdditionalLibraryDirectories>
         $(local)\lib;
         $(local)\opencv\build\x64\vc15\lib;
+        $(local)\openBlas\lib;
         %(AdditionalLibraryDirectories)
       </AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_world341.lib;%(AdditionalDependencies)</AdditionalDependencies>

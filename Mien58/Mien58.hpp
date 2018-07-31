@@ -27,7 +27,7 @@ class Mien58 {
 public:
 	void getTri(Mien::EEM & tri, cv::Size & box) { tri = _tri; box = _box; }
 	MienDL* getMienDL() { return &_mien_dl; }
-	MienFD* getMeinFD() { return &_mien_fd; }
+	MienFD* getMienFD() { return &_mien_fd; }
 	bool setup();
 	bool setupCard(cv::Mat& img);
 };
