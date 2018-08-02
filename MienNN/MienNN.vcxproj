@@ -11,20 +11,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mtcnn.cpp" />
-    <ClCompile Include="network.cpp" />
-    <ClCompile Include="pBox.cpp" />
+    <ClCompile Include="MienNN.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mtcnn.h" />
-    <ClInclude Include="network.h" />
-    <ClInclude Include="pBox.h" />
+    <ClInclude Include="MienNN.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{7C78D6AE-42BD-40D4-A05E-787D521CC12F}</ProjectGuid>
+    <ProjectGuid>{87B61E3F-4056-4BF0-B861-871265CF85E0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>mtcnn</RootNamespace>
+    <RootNamespace>MienNN</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

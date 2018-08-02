@@ -470,10 +470,15 @@ void Onet::run(Mat &image){
 }
 
 
-mtcnn::mtcnn(int rows, int cols){
-    nms_threshold[0] = 0.7;
-    nms_threshold[1] = 0.7;
-    nms_threshold[2] = 0.7;
+mtcnn::mtcnn()
+{
+}
+
+bool mtcnn::setup(int rows, int cols, float thres)
+{
+    nms_threshold[0] = 
+    nms_threshold[1] = 
+    nms_threshold[2] = thres;
 
     float minl = rows>cols?rows:cols;
     int MIN_DET_SIZE = 12;
@@ -503,6 +508,8 @@ mtcnn::mtcnn(int rows, int cols){
         count++;
     }
     simpleFace_ = new Pnet[scales_.size()];
+
+	return true;
 }
 
 mtcnn::~mtcnn(){

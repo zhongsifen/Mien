@@ -136,10 +136,13 @@ private:
 class mtcnn
 {
 public:
-    mtcnn(int row, int col);
-    ~mtcnn();
-    void findFace(Mat &image);
-private:
+	mtcnn();
+	mtcnn(int rows, int cols);
+	~mtcnn();
+	bool setup(int rows, int cols, float thres = 0.7F);
+	void findFace(Mat &image);
+
+protected:
     Mat reImage;
     float nms_threshold[3];
     vector<float> scales_;
