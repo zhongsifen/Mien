@@ -19,6 +19,14 @@ bool Mien58::setup()
 	return true;
 }
 
+bool Mien58::setup(int rows, int cols)
+{
+	setup();
+	_mien_nn.setup(rows, cols);
+
+	return true;
+}
+
 bool Mien58::setupCard(cv::Mat &img) {
 	
 	return true;

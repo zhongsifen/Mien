@@ -39,7 +39,7 @@ void fullconnectInit(const Weight *weight, pBox *outpBox);
 
 
 bool cmpScore(struct orderScore lsh, struct orderScore rsh);
-void nms(vector<struct Bbox> &boundingBox_, vector<struct orderScore> &bboxScore_, const float overlap_threshold, string modelname = "Union");
-void refineAndSquareBbox(vector<struct Bbox> &vecBbox, const int &height, const int &width);
+void nms(std::vector<struct Bbox> &boundingBox_, std::vector<struct orderScore> &bboxScore_, const float overlap_threshold, string modelname = "Union");
+void refineAndSquareBbox(std::vector<struct Bbox> &vecBbox, const int &height, const int &width);
 
 #endif

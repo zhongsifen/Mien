@@ -12,6 +12,7 @@
 #include "Mien/Mien.hpp"
 #include "MienDL/MienDL.hpp"
 #include "MienFD/MienFD.hpp"
+#include "MienNN/MienNN.hpp"
 
 class Mien58 {
 	// dlib_face_recognition_resnet_model_v1.dat uses (150, 150)
@@ -22,13 +23,16 @@ class Mien58 {
 
 	MienDL _mien_dl;
 	MienFD _mien_fd;
+	MienNN _mien_nn;
 	Mien::EEM _tri;
 	cv::Size _box;
 public:
 	void getTri(Mien::EEM & tri, cv::Size & box) { tri = _tri; box = _box; }
 	MienDL* getMienDL() { return &_mien_dl; }
 	MienFD* getMienFD() { return &_mien_fd; }
+	MienNN* getMienNN() { return &_mien_nn; }
 	bool setup();
+	bool setup(int rows, int cols);
 	bool setupCard(cv::Mat& img);
 };
 

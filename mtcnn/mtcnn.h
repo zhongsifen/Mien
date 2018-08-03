@@ -12,8 +12,8 @@ public:
     float nms_threshold;
     mydataFmt Pthreshold;
     bool firstFlag;
-    vector<struct Bbox> boundingBox_;
-    vector<orderScore> bboxScore_;
+	std::vector<struct Bbox> boundingBox_;
+	std::vector<orderScore> bboxScore_;
 private:
     //the image for mxnet conv
     struct pBox *rgb;
@@ -145,16 +145,16 @@ public:
 protected:
     Mat reImage;
     float nms_threshold[3];
-    vector<float> scales_;
+	std::vector<float> scales_;
     Pnet *simpleFace_;
-    vector<struct Bbox> firstBbox_;
-    vector<struct orderScore> firstOrderScore_;
+	std::vector<struct Bbox> firstBbox_;
+	std::vector<struct orderScore> firstOrderScore_;
     Rnet refineNet;
-    vector<struct Bbox> secondBbox_;
-    vector<struct orderScore> secondBboxScore_;
+	std::vector<struct Bbox> secondBbox_;
+	std::vector<struct orderScore> secondBboxScore_;
     Onet outNet;
-    vector<struct Bbox> thirdBbox_;
-    vector<struct orderScore> thirdBboxScore_;
+	std::vector<struct Bbox> thirdBbox_;
+	std::vector<struct orderScore> thirdBboxScore_;
 };
 
 #endif
