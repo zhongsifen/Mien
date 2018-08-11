@@ -8,10 +8,10 @@ public:
 	typedef cv::Mat Image;
 	typedef cv::Mat_<uint8_t> Gray;
 	typedef cv::Rect Face;
-	typedef std::vector<cv::Point> Landmark;
+	typedef std::vector<cv::Point2f> Landmark;
+	typedef std::vector<cv::Point2f> EEM;
 	typedef cv::Mat Chip;
 	typedef cv::Mat Desc;
-	typedef std::vector<cv::Point2f> EEM;
 
 protected:
 	const static int _nfp =  68;	// number of feature points

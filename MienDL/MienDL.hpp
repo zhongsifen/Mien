@@ -49,7 +49,6 @@ public:
 	static void fdlib(Gray_D & gray_d, Gray & gray);
 	static void tdlib(Image & image, Image_D & image_d);
 	static void tdlib(Gray & gray, Gray_D & gray_d);
-
 };
 
 #endif /* Mien_hpp */

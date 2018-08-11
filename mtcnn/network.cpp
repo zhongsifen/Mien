@@ -45,9 +45,9 @@ void image2Matrix(const Mat &image, const struct pBox *pbox){
     mydataFmt *p = pbox->pdata;
     for (int rowI = 0; rowI < image.rows; rowI++){
         for (int colK = 0; colK < image.cols; colK++){
-            *p = (image.at<Vec3b>(rowI, colK)[0] - 127.5)*0.0078125;//opencvµÄÍ¨µÀÅÅÐòÊÇRGB
-            *(p + image.rows*image.cols) = (image.at<Vec3b>(rowI, colK)[1] - 127.5)*0.0078125;
-            *(p + 2*image.rows*image.cols) = (image.at<Vec3b>(rowI, colK)[2] - 127.5)*0.0078125;
+            *p = (image.at<Vec3b>(rowI, colK)[0] - 127.5F)*0.0078125F;
+            *(p + image.rows*image.cols) = (image.at<Vec3b>(rowI, colK)[1] - 127.5F)*0.0078125F;
+            *(p + 2*image.rows*image.cols) = (image.at<Vec3b>(rowI, colK)[2] - 127.5F)*0.0078125F;
             p++;
         }
     }
@@ -155,8 +155,8 @@ void convolution(const Weight *weight, const pBox *pbox, pBox *outpBox, const st
    }
 }
 void maxPoolingInit(const pBox *pbox, pBox *Matrix, int kernelSize, int stride){
-    Matrix->width = ceil((float)(pbox->width - kernelSize) / stride + 1);
-    Matrix->height = ceil((float)(pbox->height - kernelSize) / stride + 1);
+    Matrix->width = (int)ceil((float)(pbox->width - kernelSize) / stride + 1);
+    Matrix->height = (int)ceil((float)(pbox->height - kernelSize) / stride + 1);
     Matrix->channel = pbox->channel;
     Matrix->pdata = (mydataFmt *)malloc(Matrix->channel*Matrix->width*Matrix->height*sizeof(mydataFmt));
     if(Matrix->pdata==NULL)cout<<"the maxPoolingInit is failed!!"<<endl;
@@ -297,7 +297,7 @@ void readData(string filename, long dataNumber[], mydataFmt *pTeam[]){
                     line.erase(0,1);
                     pos = line.find(']');
                     line.erase(pos,1);
-                    *(pTeam[count])++ = atof(line.data());
+                    *(pTeam[count])++ = (float)atof(line.data());
                 }
                 else{
                     count++;
@@ -306,7 +306,7 @@ void readData(string filename, long dataNumber[], mydataFmt *pTeam[]){
                     line.erase(0,1);
                     pos = line.find(']');
                     line.erase(pos,1);
-                    *(pTeam[count])++ = atof(line.data());
+                    *(pTeam[count])++ = (float)atof(line.data());
                 }
                 i++;
             }
@@ -400,10 +400,10 @@ void nms(vector<struct Bbox> &boundingBox_, vector<struct orderScore> &bboxScore
         for(int num=0;num<boundingBox_.size();num++){
             if(boundingBox_.at(num).exist){
                 //the iou
-                maxX = (boundingBox_.at(num).x1>boundingBox_.at(order).x1)?boundingBox_.at(num).x1:boundingBox_.at(order).x1;
-                maxY = (boundingBox_.at(num).y1>boundingBox_.at(order).y1)?boundingBox_.at(num).y1:boundingBox_.at(order).y1;
-                minX = (boundingBox_.at(num).x2<boundingBox_.at(order).x2)?boundingBox_.at(num).x2:boundingBox_.at(order).x2;
-                minY = (boundingBox_.at(num).y2<boundingBox_.at(order).y2)?boundingBox_.at(num).y2:boundingBox_.at(order).y2;
+                maxX = (float)((boundingBox_.at(num).x1>boundingBox_.at(order).x1)?boundingBox_.at(num).x1:boundingBox_.at(order).x1);
+                maxY = (float)((boundingBox_.at(num).y1>boundingBox_.at(order).y1)?boundingBox_.at(num).y1:boundingBox_.at(order).y1);
+                minX = (float)((boundingBox_.at(num).x2<boundingBox_.at(order).x2)?boundingBox_.at(num).x2:boundingBox_.at(order).x2);
+                minY = (float)((boundingBox_.at(num).y2<boundingBox_.at(order).y2)?boundingBox_.at(num).y2:boundingBox_.at(order).y2);
                 //maxX1 and maxY1 reuse 
                 maxX = ((minX-maxX+1)>0)?(minX-maxX+1):0;
                 maxY = ((minY-maxY+1)>0)?(minY-maxY+1):0;
@@ -439,8 +439,8 @@ void refineAndSquareBbox(vector<struct Bbox> &vecBbox, const int &height, const 
     float x1=0, y1=0, x2=0, y2=0;
     for(vector<struct Bbox>::iterator it=vecBbox.begin(); it!=vecBbox.end();it++){
         if((*it).exist){
-            bbh = (*it).x2 - (*it).x1 + 1;
-            bbw = (*it).y2 - (*it).y1 + 1;
+            bbh = (float)((*it).x2 - (*it).x1 + 1);
+            bbw = (float)((*it).y2 - (*it).y1 + 1);
             x1 = (*it).x1 + (*it).regreCoord[1]*bbh;
             y1 = (*it).y1 + (*it).regreCoord[0]*bbw;
             x2 = (*it).x2 + (*it).regreCoord[3]*bbh;
@@ -450,12 +450,12 @@ void refineAndSquareBbox(vector<struct Bbox> &vecBbox, const int &height, const 
             w = y2 - y1 + 1;
           
             maxSide = (h>w)?h:w;
-            x1 = x1 + h*0.5 - maxSide*0.5;
-            y1 = y1 + w*0.5 - maxSide*0.5;
-            (*it).x2 = round(x1 + maxSide - 1);
-            (*it).y2 = round(y1 + maxSide - 1);
-            (*it).x1 = round(x1);
-            (*it).y1 = round(y1);
+            x1 = x1 + h*0.5F - maxSide*0.5F;
+            y1 = y1 + w*0.5F - maxSide*0.5F;
+            (*it).x2 = (int)round(x1 + maxSide - 1);
+            (*it).y2 = (int)round(y1 + maxSide - 1);
+            (*it).x1 = (int)round(x1);
+            (*it).y1 = (int)round(y1);
 
             //boundary check
             if((*it).x1<0)(*it).x1=0;
@@ -463,7 +463,7 @@ void refineAndSquareBbox(vector<struct Bbox> &vecBbox, const int &height, const 
             if((*it).x2>height)(*it).x2 = height - 1;
             if((*it).y2>width)(*it).y2 = width - 1;
 
-            it->area = (it->x2 - it->x1)*(it->y2 - it->y1);
+            it->area = (float)(it->x2 - it->x1)*(it->y2 - it->y1);
         }
     }
 }

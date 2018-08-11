@@ -36,6 +36,12 @@ namespace dlib_cv {
 	}
 	
 	inline
+	void fdlib(dlib::point& dlp, cv::Point2f& cvp) {
+		cvp.x = dlp.x();
+		cvp.y = dlp.y();
+	}
+
+	inline
 	void fdlib(dlib::rectangle& dlr, cv::Rect& cvr) {
 		cvr.x = (int)dlr.left();
 		cvr.y = (int)dlr.top();

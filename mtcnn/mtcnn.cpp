@@ -2,7 +2,7 @@
 #include "MienConfig.hpp"
 
 Pnet::Pnet(){
-    Pthreshold = 0.6;
+    Pthreshold = 0.6F;
     nms_threshold = 0.5;
     firstFlag = true;
     this->rgb = new pBox;
@@ -141,12 +141,12 @@ void Pnet::generateBbox(const struct pBox *score, const struct pBox *location, m
                 bbox.score = *p;
                 order.score = *p;
                 order.oriOrder = count;
-                bbox.x1 = round((stride*row+1)/scale);
-                bbox.y1 = round((stride*col+1)/scale);
-                bbox.x2 = round((stride*row+1+cellsize)/scale);
-                bbox.y2 = round((stride*col+1+cellsize)/scale);
+                bbox.x1 = (int)round((stride*row+1)/scale);
+                bbox.y1 = (int)round((stride*col+1)/scale);
+                bbox.x2 = (int)round((stride*row+1+cellsize)/scale);
+                bbox.y2 = (int)round((stride*col+1+cellsize)/scale);
                 bbox.exist = true;
-                bbox.area = (bbox.x2 - bbox.x1)*(bbox.y2 - bbox.y1);
+                bbox.area = (float)(bbox.x2 - bbox.x1)*(bbox.y2 - bbox.y1);
                 for(int channel=0;channel<4;channel++)
                     bbox.regreCoord[channel]=*(plocal+channel*location->width*location->height);
                 boundingBox_.push_back(bbox);
@@ -160,7 +160,7 @@ void Pnet::generateBbox(const struct pBox *score, const struct pBox *location, m
 }
 
 Rnet::Rnet(){
-    Rthreshold = 0.7;
+    Rthreshold = 0.7F;
 
     this->rgb = new pBox;
     this->conv1_matrix = new pBox;
@@ -294,7 +294,7 @@ void Rnet::run(Mat &image){
 }
 
 Onet::Onet(){
-    Othreshold = 0.8;
+    Othreshold = 0.8F;
     this->rgb = new pBox;
 
     this->conv1_matrix = new pBox;
@@ -486,12 +486,12 @@ bool mtcnn::setup(int rows, int cols, float thres)
     nms_threshold[1] = 
     nms_threshold[2] = thres;
 
-    float minl = rows>cols?rows:cols;
+    float minl = (float)(rows>cols?rows:cols);
     int MIN_DET_SIZE = 12;
     int minsize = 60;
     float m = (float)MIN_DET_SIZE/minsize;
     minl *= m;
-    float factor = 0.709;
+    float factor = 0.709F;
     int factor_count = 0;
 
     while(minl>MIN_DET_SIZE){
@@ -500,7 +500,7 @@ bool mtcnn::setup(int rows, int cols, float thres)
         minl *= factor;
         factor_count++;
     }
-    float minside = rows<cols ? rows : cols;
+    float minside = (float)(rows<cols ? rows : cols);
     int count = 0;
     for (vector<float>::iterator it = scales_.begin(); it != scales_.end(); it++){
         if (*it > 1){
@@ -559,7 +559,7 @@ void mtcnn::findFace(Mat &image){
             refineNet.run(secImage);
             if(*(refineNet.score_->pdata+1)>refineNet.Rthreshold){
                 memcpy(it->regreCoord, refineNet.location_->pdata, 4*sizeof(mydataFmt));
-                it->area = (it->x2 - it->x1)*(it->y2 - it->y1);
+                it->area = (float)(it->x2 - it->x1)*(it->y2 - it->y1);
                 it->score = *(refineNet.score_->pdata+1);
                 secondBbox_.push_back(*it);
                 order.score = it->score;
@@ -586,7 +586,7 @@ void mtcnn::findFace(Mat &image){
             mydataFmt *pp=NULL;
             if(*(outNet.score_->pdata+1)>outNet.Othreshold){
                 memcpy(it->regreCoord, outNet.location_->pdata, 4*sizeof(mydataFmt));
-                it->area = (it->x2 - it->x1)*(it->y2 - it->y1);
+                it->area = (float)(it->x2 - it->x1)*(it->y2 - it->y1);
                 it->score = *(outNet.score_->pdata+1);
                 pp = outNet.keyPoint_->pdata;
                 for(int num=0;num<5;num++){
