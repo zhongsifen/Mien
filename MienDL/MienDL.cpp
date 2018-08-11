@@ -10,7 +10,7 @@
 #include "dlib_cv.hpp"
 #include <opencv2/opencv.hpp>
 
-#include <dlib/gui_widgets.h>
+//#include <dlib/gui_widgets.h>
 
 MienDL::MienDL()
 {

@@ -10,22 +10,54 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="classifier.h" />
+    <ClInclude Include="classifier\lab_boosted_classifier.h" />
+    <ClInclude Include="classifier\mlp.h" />
+    <ClInclude Include="classifier\surf_mlp.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="detector.h" />
+    <ClInclude Include="face_detection.h" />
+    <ClInclude Include="feature_map.h" />
+    <ClInclude Include="feat\lab_feature_map.h" />
+    <ClInclude Include="feat\surf_feature_map.h" />
+    <ClInclude Include="fust.h" />
+    <ClInclude Include="io\lab_boost_model_reader.h" />
+    <ClInclude Include="io\surf_mlp_model_reader.h" />
+    <ClInclude Include="model_reader.h" />
+    <ClInclude Include="util\image_pyramid.h" />
+    <ClInclude Include="util\math_func.h" />
+    <ClInclude Include="util\nms.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="classifier\lab_boosted_classifier.cpp" />
+    <ClCompile Include="classifier\mlp.cpp" />
+    <ClCompile Include="classifier\surf_mlp.cpp" />
+    <ClCompile Include="face_detection.cpp" />
+    <ClCompile Include="feat\lab_feature_map.cpp" />
+    <ClCompile Include="feat\surf_feature_map.cpp" />
+    <ClCompile Include="fust.cpp" />
+    <ClCompile Include="io\lab_boost_model_reader.cpp" />
+    <ClCompile Include="io\surf_mlp_model_reader.cpp" />
+    <ClCompile Include="util\image_pyramid.cpp" />
+    <ClCompile Include="util\nms.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{8D7C4335-ED9A-424A-B61B-6C8F32A08E85}</ProjectGuid>
+    <ProjectGuid>{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>appMien</RootNamespace>
+    <RootNamespace>StDetect</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -45,26 +77,12 @@
     <Import Project="..\Mien.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -73,43 +91,30 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\Mien3rd.cpp" />
-    <ClCompile Include="appMien.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Mien58\Mien58.vcxproj">
-      <Project>{a88e629f-746b-433c-a78b-769b9ef32794}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MienDL\MienDL.vcxproj">
-      <Project>{6f9744b5-85f1-4440-82db-d26e7d801230}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MienFD\MienFD.vcxproj">
-      <Project>{39517b12-8927-408f-b808-ee652989bb8d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MienNN\MienNN.vcxproj">
-      <Project>{87b61e3f-4056-4bf0-b861-871265cf85e0}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MienSW\MienSW.vcxproj">
-      <Project>{00fb9853-a6af-422b-92e1-f9c8947df3f4}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Mien\Mien.vcxproj">
-      <Project>{cdf44ec3-d88e-467d-a693-000a49496730}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\mtcnn\mtcnn.vcxproj">
-      <Project>{7c78d6ae-42bd-40d4-a05e-787d521cc12f}</Project>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
