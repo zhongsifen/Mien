@@ -3,11 +3,11 @@
 #include "Mien/Mien.hpp"
 #include "mtcnn/mtcnn.h"
 
-class Mnn : mtcnn
+class Mnn : public mtcnn
 {
 public:
 	Mnn(int rows, int cols) { setup(rows, cols); }
-	bool doEEM(Mien::Image & image, Mien::Face & face, Mien::EEM & eem);
+	bool doLandmark(Mien::Image & image, Mien::Face & face, Mien::Landmark & langmark);
 };
 
 class MienNN : Mien
@@ -15,5 +15,7 @@ class MienNN : Mien
 	Mnn* nn;
 public:
 	bool setup(int rows, int cols);
-	bool doEEM(Mien::Image & image, Mien::Face & face, Mien::EEM & eem);
+	bool doLandmark(Mien::Image & image, Mien::Face & face, Mien::Landmark & landmark);
+
+	static void fnn(Bbox & bboxs, Mien::Face & face, Mien::Landmark & landmark);
 };

@@ -522,7 +522,7 @@ mtcnn::~mtcnn(){
 	if (simpleFace_ != nullptr) delete []simpleFace_;
 }
 
-void mtcnn::findFace(Mat &image){
+void mtcnn::detect(Mat & image, std::vector<Bbox> & bboxs){
     struct orderScore order;
     int count = 0;
     for (size_t i = 0; i < scales_.size(); i++) {
@@ -609,16 +609,17 @@ void mtcnn::findFace(Mat &image){
     if(count<1)return;
     refineAndSquareBbox(thirdBbox_, image.rows, image.cols);
     nms(thirdBbox_, thirdBboxScore_, nms_threshold[2], "Min");
-    //for(vector<struct Bbox>::iterator it=thirdBbox_.begin(); it!=thirdBbox_.end();it++){
-    //    if((*it).exist){
-    //        rectangle(image, Point((*it).y1, (*it).x1), Point((*it).y2, (*it).x2), Scalar(0,0,255), 2,8,0);
-    //        for(int num=0;num<5;num++)circle(image,Point((int)*(it->ppoint+num), (int)*(it->ppoint+num+5)),3,Scalar(0,255,255), -1);
-    //    }
-    //}
+    for(vector<struct Bbox>::iterator it=thirdBbox_.begin(); it!=thirdBbox_.end();it++){
+		bboxs.push_back(*it);
+        //if((*it).exist){
+        //    rectangle(image, Point((*it).y1, (*it).x1), Point((*it).y2, (*it).x2), Scalar(0,0,255), 2,8,0);
+        //    for(int num=0;num<5;num++)circle(image,Point((int)*(it->ppoint+num), (int)*(it->ppoint+num+5)),3,Scalar(0,255,255), -1);
+        //}
+    }
     firstBbox_.clear();
     firstOrderScore_.clear();
     secondBbox_.clear();
     secondBboxScore_.clear();
-    //thirdBbox_.clear();
-    //thirdBboxScore_.clear();
+    thirdBbox_.clear();
+    thirdBboxScore_.clear();
 }
