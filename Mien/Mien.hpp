@@ -18,10 +18,10 @@ protected:
 	const static int _ndv = 128;	// number of description values
 
 public:
-	static bool doGray(Image & image, Gray & gray);
-	static bool doEEM(Landmark & landmark, EEM & eem);
-	static bool doChipTri(Image & image, EEM & eem, EEM & tri, cv::Size & box, Chip & chip);
-	static float doMeasure(Desc & d1, Desc & d2);
+	static bool toGray(Image & image, Gray & gray);
+	static bool toEEM(Landmark & landmark, EEM & eem);
+	static bool toChipTri(Image & image, EEM & eem, EEM & tri, cv::Size & box, Chip & chip);
+	static bool toMeasure(Desc & d1, Desc & d2, float & measure);
 
 	static void showFace(cv::Mat & img, Face & face);
 	static void showLandmark(cv::Mat & img, Landmark & landmark);

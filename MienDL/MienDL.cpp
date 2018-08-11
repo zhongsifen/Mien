@@ -91,7 +91,7 @@ bool MienDL::doDesc(Image & image, cv::Rect & r, Chip & chip, Desc & desc)
 	Image_D image_d;
 	tdlib(image, image_d);
 	Gray gray;
-	doGray(image, gray);
+	toGray(image, gray);
 	Gray_D gray_d;
 	tdlib(gray, gray_d);
 	dlib::rectangle r_d;
