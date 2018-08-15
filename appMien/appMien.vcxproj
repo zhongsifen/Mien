@@ -100,6 +100,9 @@
     <ProjectReference Include="..\MienNN\MienNN.vcxproj">
       <Project>{87b61e3f-4056-4bf0-b861-871265cf85e0}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\MienST\MienST.vcxproj">
+      <Project>{0830ecf1-9ba9-4c53-97aa-ab00e3519222}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MienSW\MienSW.vcxproj">
       <Project>{00fb9853-a6af-422b-92e1-f9c8947df3f4}</Project>
     </ProjectReference>
@@ -108,6 +111,9 @@
     </ProjectReference>
     <ProjectReference Include="..\mtcnn\mtcnn.vcxproj">
       <Project>{7c78d6ae-42bd-40d4-a05e-787d521cc12f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\StDetect\StDetect.vcxproj">
+      <Project>{a05b5d38-303d-4a20-a0d3-84eda18edcc7}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

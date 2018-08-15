@@ -8,9 +8,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}</ProjectGuid>
+    <ProjectGuid>{39C0A440-9841-425C-84BC-062D6CF0DA93}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>StDetect</RootNamespace>
+    <RootNamespace>StAlign</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
   </PropertyGroup>
@@ -54,36 +54,15 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="classifier.h" />
-    <ClInclude Include="classifier\lab_boosted_classifier.h" />
-    <ClInclude Include="classifier\mlp.h" />
-    <ClInclude Include="classifier\surf_mlp.h" />
-    <ClInclude Include="common.h" />
-    <ClInclude Include="detector.h" />
-    <ClInclude Include="face_detection.h" />
-    <ClInclude Include="feature_map.h" />
-    <ClInclude Include="feat\lab_feature_map.h" />
-    <ClInclude Include="feat\surf_feature_map.h" />
-    <ClInclude Include="fust.h" />
-    <ClInclude Include="io\lab_boost_model_reader.h" />
-    <ClInclude Include="io\surf_mlp_model_reader.h" />
-    <ClInclude Include="model_reader.h" />
-    <ClInclude Include="util\image_pyramid.h" />
-    <ClInclude Include="util\math_func.h" />
-    <ClInclude Include="util\nms.h" />
+    <ClCompile Include="cfan.cpp" />
+    <ClCompile Include="face_alignment.cpp" />
+    <ClCompile Include="sift.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="classifier\lab_boosted_classifier.cpp" />
-    <ClCompile Include="classifier\mlp.cpp" />
-    <ClCompile Include="classifier\surf_mlp.cpp" />
-    <ClCompile Include="face_detection.cpp" />
-    <ClCompile Include="feat\lab_feature_map.cpp" />
-    <ClCompile Include="feat\surf_feature_map.cpp" />
-    <ClCompile Include="fust.cpp" />
-    <ClCompile Include="io\lab_boost_model_reader.cpp" />
-    <ClCompile Include="io\surf_mlp_model_reader.cpp" />
-    <ClCompile Include="util\image_pyramid.cpp" />
-    <ClCompile Include="util\nms.cpp" />
+    <ClInclude Include="cfan.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="face_alignment.h" />
+    <ClInclude Include="sift.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

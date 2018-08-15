@@ -34,16 +34,16 @@
 
 #include <cstdint>
 
-#if defined _WIN32
-#ifdef SEETA_EXPORTS
-#define __declspec(dllexport)
-#else
-#define __declspec(dllimport)
-#endif
-
-#else
+//#if defined _WIN32
+//#ifdef SEETA_EXPORTS
+//#define SEETA_API __declspec(dllexport)
+//#else
+//#define SEETA_API __declspec(dllimport)
+//#endif
+//
+//#else
 #define SEETA_API
-#endif
+//#endif
 
 #define DISABLE_COPY_AND_ASSIGN(classname) \
  private: \

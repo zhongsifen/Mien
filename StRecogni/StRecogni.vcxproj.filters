@@ -9,92 +9,117 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="classifier.h">
+    <ClInclude Include="aligner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bias_adder_net.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bn_net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="detector.h">
+    <ClInclude Include="common_net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="face_detection.h">
+    <ClInclude Include="conv_net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="feature_map.h">
+    <ClInclude Include="eltwise_net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="fust.h">
+    <ClInclude Include="face_identification.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="model_reader.h">
+    <ClInclude Include="hyper_param.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="io\lab_boost_model_reader.h">
+    <ClInclude Include="inner_product_net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="io\surf_mlp_model_reader.h">
+    <ClInclude Include="log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="util\image_pyramid.h">
+    <ClInclude Include="math_functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="util\math_func.h">
+    <ClInclude Include="max_pooling_net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="util\nms.h">
+    <ClInclude Include="net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="feat\lab_feature_map.h">
+    <ClInclude Include="net_factory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="feat\surf_feature_map.h">
+    <ClInclude Include="pad_net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="classifier\lab_boosted_classifier.h">
+    <ClInclude Include="recognizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="classifier\mlp.h">
+    <ClInclude Include="spatial_transform_net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="classifier\surf_mlp.h">
+    <ClInclude Include="tform_maker_net.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="viplnet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="face_detection.cpp">
+    <ClCompile Include="bias_adder_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fust.cpp">
+    <ClCompile Include="blob.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="io\lab_boost_model_reader.cpp">
+    <ClCompile Include="bn_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="io\surf_mlp_model_reader.cpp">
+    <ClCompile Include="common_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="util\image_pyramid.cpp">
+    <ClCompile Include="conv_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="util\nms.cpp">
+    <ClCompile Include="eltwise_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="feat\lab_feature_map.cpp">
+    <ClCompile Include="inner_product_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="feat\surf_feature_map.cpp">
+    <ClCompile Include="log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="classifier\lab_boosted_classifier.cpp">
+    <ClCompile Include="math_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="classifier\mlp.cpp">
+    <ClCompile Include="max_pooling_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="classifier\surf_mlp.cpp">
+    <ClCompile Include="net.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pad_net.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="spatial_transform_net.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tform_maker_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

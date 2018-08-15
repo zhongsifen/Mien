@@ -13,6 +13,7 @@ public:
 	}
 
 	bool doFace(Gray& gray, Face& face);
+
 	bool doLandmark(Gray & gray, cv::Rect & r, Landmark & landmark);
 	bool doChip(Image & image, cv::Rect & r, Chip & chip);
 	bool doDesc(Chip & chip, Desc & desc);

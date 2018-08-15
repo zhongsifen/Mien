@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MienST", "MienST\MienST.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MienSW", "MienSW\MienSW.vcxproj", "{00FB9853-A6AF-422B-92E1-F9C8947DF3F4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StDetect", "StDetect\StDetect.vcxproj", "{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -93,6 +95,13 @@ Global
 		{00FB9853-A6AF-422B-92E1-F9C8947DF3F4}.Release|x64.ActiveCfg = Release|x64
 		{00FB9853-A6AF-422B-92E1-F9C8947DF3F4}.Release|x64.Build.0 = Release|x64
 		{00FB9853-A6AF-422B-92E1-F9C8947DF3F4}.Release|x86.ActiveCfg = Release|x64
+		{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}.Debug|x64.ActiveCfg = Release|x64
+		{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}.Debug|x64.Build.0 = Release|x64
+		{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}.Debug|x86.ActiveCfg = Release|x64
+		{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}.Debug|x86.Build.0 = Release|x64
+		{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}.Release|x64.ActiveCfg = Release|x64
+		{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}.Release|x64.Build.0 = Release|x64
+		{A05B5D38-303D-4A20-A0D3-84EDA18EDCC7}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

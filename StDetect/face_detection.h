@@ -41,8 +41,8 @@ namespace seeta {
 
 class FaceDetection {
  public:
-  explicit FaceDetection(std::string model_path);
-  ~FaceDetection();
+  SEETA_API explicit FaceDetection(std::string model_path);
+  SEETA_API ~FaceDetection();
 
   /**
    * @brief Detect faces on input image.
@@ -51,7 +51,7 @@ class FaceDetection {
    * (2) Currently this function does not give the Euler angles, which are
    *     left with invalid values.
    */
-  std::vector<seeta::FaceInfo> Detect(const seeta::ImageData & img);
+  SEETA_API std::vector<seeta::FaceInfo> Detect(const seeta::ImageData & img);
 
   /**
    * @brief Set the minimum size of faces to detect.
@@ -59,7 +59,7 @@ class FaceDetection {
    * The minimum size is constrained as no smaller than 20. Invalid values will
    * be ignored.
    */
-  void SetMinFaceSize(int32_t size);
+  SEETA_API void SetMinFaceSize(int32_t size);
 
   /** 
    * @brief Set the maximum size of faces to detect.
@@ -67,7 +67,7 @@ class FaceDetection {
    * The maximum face size actually used is computed as the minimum among: user
    * specified size, image width, image height.
    */
-  void SetMaxFaceSize(int32_t size);
+  SEETA_API void SetMaxFaceSize(int32_t size);
 
   /**
    * @brief Set the factor between adjacent scales of image pyramid.
@@ -76,7 +76,7 @@ class FaceDetection {
    * an input image of size w x h will be resized to 0.5w x 0.5h, 0.25w x 0.25h,
    * 0.125w x 0.125h, etc. Invalid values will be ignored.
    */
-  void SetImagePyramidScaleFactor(float factor);
+  SEETA_API void SetImagePyramidScaleFactor(float factor);
 
   /**
    * @brief Set the sliding window step in horizontal and vertical directions.
@@ -84,7 +84,7 @@ class FaceDetection {
    * The steps should take positive values, and invalid ones will be ignored.
    * Usually a step of 4 is a reasonable choice.
    */
-  void SetWindowStep(int32_t step_x, int32_t step_y);
+  SEETA_API void SetWindowStep(int32_t step_x, int32_t step_y);
 
   /**
    * @brief Set the score thresh of detected faces.
@@ -93,9 +93,9 @@ class FaceDetection {
    * Typical threshold values include 0.95, 2.8, 4.5. One can adjust the
    * threshold based on his or her own test set.
    */
-  void SetScoreThresh(float thresh);
+  SEETA_API void SetScoreThresh(float thresh);
 
-  //DISABLE_COPY_AND_ASSIGN(FaceDetection);
+  DISABLE_COPY_AND_ASSIGN(FaceDetection);
 
  private:
   class Impl;
