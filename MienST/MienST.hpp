@@ -18,9 +18,12 @@ public:
 	}
 
 	bool doFace(Gray& gray, Face& face);
-	bool doLandmark(Gray & gray, cv::Rect & r, Landmark & landmark);
+	bool doLandmark(Gray & gray, Landmark & landmark);
 
 	bool doChip(Image & image, cv::Rect & r, Chip & chip);
 	bool doDesc(Chip & chip, Desc & desc);
 	bool doDesc(Image & image, cv::Rect & r, Chip & chip, Desc & desc);
+
+	static void tst(Image & image, seeta::ImageData & image_st);
+	static void fst(seeta::FaceLandmark & landmark_st, Landmark & landmark);
 };
