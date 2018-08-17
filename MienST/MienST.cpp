@@ -3,6 +3,7 @@
 MienST::MienST()
 {
 	fd = new seeta::FaceDetection(MienConfig::_S + "seeta_fd_frontal_v1.0.bin");
+	fa = new seeta::FaceAlignment(MienConfig::_S + "seeta_fa_v1.1.bin");
 }
 
 bool MienST::doFace(Gray & gray, Face & face)
@@ -22,8 +23,14 @@ bool MienST::doFace(Gray & gray, Face & face)
 			score = faces[k = i].score;
 		}
 	}
-	seeta::Rect* box = &faces[k].bbox;
+	face_st = faces[k];
+	seeta::Rect* box = &face_st.bbox;
 	face = cv::Rect(box->x, box->y, box->width, box->height);
 
+	return true;
+}
+
+bool MienST::doLandmark(Gray & gray, cv::Rect & r, Landmark & landmark)
+{
 	return true;
 }

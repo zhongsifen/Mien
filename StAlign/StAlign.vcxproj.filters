@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cfan.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="face_alignment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="sift.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cfan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

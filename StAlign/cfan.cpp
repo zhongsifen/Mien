@@ -108,7 +108,7 @@ void CCFAN::InitModel(const char *model_path)
 {
   /*Open the model file*/
   //FILE *fp = fopen(model_path, "rb+");
-  std::ifstream fp(model_path, std::ifstream::in || std::ifstream::binary);
+  std::ifstream fp(model_path, std::ifstream::binary);
   if (!fp.is_open()) return;
 
   mean_shape_ = new float[pts_num_ * 2];

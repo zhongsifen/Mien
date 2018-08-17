@@ -101,6 +101,8 @@ typedef struct FaceInfo {
     double x;
     double y;
   } FacialLandmark;
+
+  typedef FacialLandmark FaceLandmark[5];
 }  // namespace seeta
 
 #endif  // SEETA_COMMON_H_

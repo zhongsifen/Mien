@@ -32,6 +32,7 @@
 #ifndef SEETA_FACE_ALIGNMENT_H_
 #define SEETA_FACE_ALIGNMENT_H_
 
+#include <string>
 #include <cstdlib>
 #include "common.h"
 class CCFAN;
@@ -46,19 +47,20 @@ class FaceAlignment{
   *  @param model_path Path of the model file, either absolute or relative to
   *  the working directory.
   */
-  FaceAlignment(const char* model_path = NULL);
+  SEETA_API FaceAlignment(const char* model_path = NULL);
+  SEETA_API FaceAlignment(std::string model_path);
 
   /** A Destructor which should never be called explicitly.
   *  Release all dynamically allocated resources.
   */
-  ~FaceAlignment();
+  SEETA_API ~FaceAlignment();
 
   /** Detect five facial landmarks, i.e., two eye centers, nose tip and two mouth corners.
   *  @param gray_im A grayscale image
   *  @param face_info The face bounding box
   *  @param[out] points The locations of detected facial points
   */
-  bool PointDetectLandmarks(ImageData gray_im, FaceInfo face_info, FacialLandmark *points);
+  SEETA_API bool PointDetectLandmarks(ImageData gray_im, FaceInfo face_info, FacialLandmark *points);
 
  private:
   CCFAN *facial_detector;
