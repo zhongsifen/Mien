@@ -122,5 +122,11 @@
     <ClCompile Include="tform_maker_net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="aligner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="face_identification.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

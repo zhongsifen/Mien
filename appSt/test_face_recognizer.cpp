@@ -282,7 +282,7 @@ void TEST(FaceRecognizerTest, ExtractFeatureWithCrop) {
   delete []feat_sdk;
 }
 
-int main_recogni(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
   TEST(FaceRecognizerTest, CropFace);
   TEST(FaceRecognizerTest, ExtractFeature);
   TEST(FaceRecognizerTest, ExtractFeatureWithCrop);

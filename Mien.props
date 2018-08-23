@@ -2,10 +2,23 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(local)\include;$(local)\dlib\include;$(local)\opencv\build\include;$(local)\openBlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+        $(local)\include;
+        $(local)\dlib\include;
+        $(local)\opencv\build\include;
+        $(local)\openBlas\include;
+        $(local)\fixmath;
+        %(AdditionalIncludeDirectories)
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(local)\lib;$(local)\dlib\lib;$(local)\opencv\build\x64\vc15\lib;$(local)\openBlas\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>
+        $(local)\lib;
+        $(local)\dlib\lib;
+        $(local)\opencv\build\x64\vc15\lib;
+        $(local)\openBlas\lib;
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_world341.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

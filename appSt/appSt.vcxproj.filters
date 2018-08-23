@@ -18,7 +18,7 @@
     <ClCompile Include="appSt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="facedetection_test.cpp">
+    <ClCompile Include="test_face_verification.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

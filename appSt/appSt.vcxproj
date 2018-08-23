@@ -85,11 +85,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="appSt.cpp" />
-    <ClCompile Include="facedetection_test.cpp" />
+    <ClCompile Include="test_face_verification.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StAlign\StAlign.vcxproj">
+      <Project>{c3a8009d-62ee-4a8a-b346-882731885f03}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\StDetect\StDetect.vcxproj">
       <Project>{a05b5d38-303d-4a20-a0d3-84eda18edcc7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\StRecogni\StRecogni.vcxproj">
+      <Project>{eddcaef9-39cf-4932-8cc4-08c10214997f}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

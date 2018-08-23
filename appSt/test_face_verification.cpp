@@ -92,7 +92,7 @@ std::string MODEL_DIR = "./model/";
 #endif
 
 
-int main_verif(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
   // Initialize face detection model
   seeta::FaceDetection detector("seeta_fd_frontal_v1.0.bin");
   detector.SetMinFaceSize(40);

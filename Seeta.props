@@ -6,15 +6,14 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>
-        C:\Users\zhongsifen\Github\SeetaFaceEngine\FaceIdentification\include;
-        C:\Users\zhongsifen\Github\SeetaFaceEngine\FaceAlignment\include;
-        C:\Users\zhongsifen\Github\SeetaFaceEngine\FaceDetection\include;
+        C:\Users\zhongsifen\Work\Mien\StDetectFix;
+        C:\Users\zhongsifen\Work\Mien\StAlign;
+        C:\Users\zhongsifen\Work\Mien\StRecogni;
         %(AdditionalIncludeDirectories)
       </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>
-        C:\Users\zhongsifen\Github\SeetaFaceEngine\install\lib;
         %(AdditionalLibraryDirectories)
       </AdditionalLibraryDirectories>
     </Link>

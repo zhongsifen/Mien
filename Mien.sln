@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StDetect", "StDetect\StDete
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StAlign", "StAlign\StAlign.vcxproj", "{C3A8009D-62EE-4A8A-B346-882731885F03}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StRecogni", "StRecogni\StRecogni.vcxproj", "{EDDCAEF9-39CF-4932-8CC4-08C10214997F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -100,6 +102,12 @@ Global
 		{C3A8009D-62EE-4A8A-B346-882731885F03}.Release|x64.ActiveCfg = Release|x64
 		{C3A8009D-62EE-4A8A-B346-882731885F03}.Release|x64.Build.0 = Release|x64
 		{C3A8009D-62EE-4A8A-B346-882731885F03}.Release|x86.ActiveCfg = Release|x64
+		{EDDCAEF9-39CF-4932-8CC4-08C10214997F}.Debug|x64.ActiveCfg = Debug|x64
+		{EDDCAEF9-39CF-4932-8CC4-08C10214997F}.Debug|x64.Build.0 = Debug|x64
+		{EDDCAEF9-39CF-4932-8CC4-08C10214997F}.Debug|x86.ActiveCfg = Debug|x64
+		{EDDCAEF9-39CF-4932-8CC4-08C10214997F}.Release|x64.ActiveCfg = Release|x64
+		{EDDCAEF9-39CF-4932-8CC4-08C10214997F}.Release|x64.Build.0 = Release|x64
+		{EDDCAEF9-39CF-4932-8CC4-08C10214997F}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
