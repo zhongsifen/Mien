@@ -8,9 +8,11 @@ MienST::MienST()
 
 bool MienST::init()
 {
-	fd = new seeta::FaceDetection(MienConfig::_S + "seeta_fd_frontal_v1.0.bin");	if (fd == nullptr) return false;
-	fa = new seeta::FaceAlignment(MienConfig::_S + "seeta_fa_v1.1.bin");			if (fa == nullptr) return false;
-	fr = new seeta::FaceIdentification(MienConfig::_S + "seeta_fr_v1.0.bin");		if (fr == nullptr) return false;
+	if (stage < INIT) {
+		fd = new seeta::FaceDetection(MienConfig::_S + "seeta_fd_frontal_v1.0.bin");	if (fd == nullptr) return false;
+		fa = new seeta::FaceAlignment(MienConfig::_S + "seeta_fa_v1.1.bin");			if (fa == nullptr) return false;
+		fr = new seeta::FaceIdentification(MienConfig::_S + "seeta_fr_v1.0.bin");		if (fr == nullptr) return false;
+	}
 
 	stage = INIT;
 

@@ -16,14 +16,6 @@
   <ItemGroup>
     <ClInclude Include="MienST.hpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\StAlign\StAlign.vcxproj">
-      <Project>{39c0a440-9841-425c-84bc-062d6cf0da93}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\StDetect\StDetect.vcxproj">
-      <Project>{a05b5d38-303d-4a20-a0d3-84eda18edcc7}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{0830ECF1-9BA9-4C53-97AA-AB00E3519222}</ProjectGuid>

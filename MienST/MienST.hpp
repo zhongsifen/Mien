@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Mien/Mien.hpp"
-#include "StDetect/face_detection.h"
-#include "StAlign/face_alignment.h"
-#include "StRecogni/face_identification.h"
+#include "SeetaFace/face_detection.h"
+#include "SeetaFace/face_alignment.h"
+#include "SeetaFace/face_identification.h"
 
 class MienST : public Mien
 {
