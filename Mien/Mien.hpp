@@ -3,8 +3,7 @@
 #include "MienConfig.hpp"
 #include <opencv2/core.hpp>
 
-class Mien {
-public:
+namespace Mien {
 	typedef cv::Mat Image;
 	typedef cv::Mat_<uint8_t> Gray;
 	typedef cv::Rect Face;
@@ -12,7 +11,9 @@ public:
 	typedef std::vector<cv::Point2f> EEM;
 	typedef cv::Mat Chip;
 	typedef cv::Mat Desc;
+};
 
+class Mien {
 protected:
 	const static int _nfp =  68;	// number of feature points
 	const static int _ndv = 128;	// number of description values
